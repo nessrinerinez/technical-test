@@ -1,0 +1,45 @@
+<!-- ************************************************************************************************************** -->
+<!-- ************************************************************************************************************** -->
+<!-- ************************************************************************************************************** -->
+
+<app-loader [Loader] ="loader"></app-loader>
+
+<div class="content" role="main">
+    usernames examples:
+    <ul>
+        <li>mgrankin</li>
+        <li>jhahspu</li>
+        <li>alexanderawwagner</li>
+        <li>dougwl</li>
+        <li>compcon</li>
+        <li>mingderwang</li>
+        <li>Terminus004</li>
+    </ul>
+
+    <input class="form-control"  placeholder="Search By username" #inputSearch />
+    
+    <ul class="list-group" *ngIf="results?.length">
+        <table class="table">
+            <thead>
+                <th>id</th>
+                <th>URL</th>
+                <th>created_at</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let result of results" (click)="getForksDetails(result.id)">
+                    <td>{{result.id}}</td>
+                    <td>{{result.url}}</td>
+                    <td>{{result.created_at}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </ul> 
+
+</div>
+
+
+
+<!-- ************************************************************************************************************** -->
+<!-- ************************************************************************************************************** -->
+<!-- ************************************************************************************************************** -->

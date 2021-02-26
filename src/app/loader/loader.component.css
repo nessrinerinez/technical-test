@@ -1,0 +1,57 @@
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+  }
+  
+  .loading-bar {
+    display: inline-block;
+    width: 7px;
+    height: 33px;
+    margin-left: 4px;
+    border-radius: 4px !important;
+    -webkit-animation: loading 1s ease-in-out infinite;
+    animation: loading 1s ease-in-out infinite;
+  }
+  
+  .loading-bar:nth-child(1) {
+    background-color:blue;
+    animation-delay: 0;
+  }
+  
+  .loading-bar:nth-child(2) {
+    background-color: blue;
+    animation-delay: 0.09s;
+  }
+  
+  .loading-bar:nth-child(3) {
+    background-color: blue;
+    animation-delay: .18s;
+  }
+  
+  .loading-bar:nth-child(4) {
+    background-color: blue;
+    animation-delay: .27s;
+  }
+  
+  .loading-bar:nth-child(5) {
+    background-color: blue;
+    animation-delay: 0.35s;
+  }
+  
+  @keyframes loading {
+    0% {
+      transform: scale(1);
+    }
+  
+    20% {
+      transform: scale(1, 2.2);
+    }
+  
+    40% {
+      transform: scale(1);
+    }
+  }
+  
+  
